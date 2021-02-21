@@ -7,13 +7,15 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).addEventListener('touchstart',function() {
+$(document).click(function(e) {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
 });
+
+
 
 $(".btn").click(function() {
 
